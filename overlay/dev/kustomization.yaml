@@ -1,7 +1,7 @@
 ---
 namespace: mc-dev
 resources:
-- ./../../base
-- namespace.yml
+- ../../base/
+- namespace.yaml
 patchesStrategicMerge:
-- deploy.yml
+- deploy.yaml
