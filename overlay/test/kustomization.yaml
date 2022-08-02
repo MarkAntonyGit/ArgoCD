@@ -1,5 +1,5 @@
 ---
-namespace: mc-dev
+namespace: mc-test
 resources:
 - ./../../base
 - namespace.yml
