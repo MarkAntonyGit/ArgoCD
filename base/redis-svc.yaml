@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis-leader
+  namespace: default
   labels:
     app: redis
     role: leader
@@ -13,4 +14,20 @@ spec:
   selector:
     app: redis
     role: leader
+    tier: backend
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-follower
+  labels:
+    app: redis
+    role: follower
+    tier: backend
+spec:
+  ports:
+  - port: 6379
+  selector:
+    app: redis
+    role: follower
     tier: backend
